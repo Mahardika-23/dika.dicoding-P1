@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>ITS ME</title>
+  <link rel="stylesheet" href="style/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="head">
+      <img src="assets/ITS'ME-LOGO.png" alt="its'me-logo">
+      <h1>IT'S ME</h1>
+      <p>Aplikasi Pengenalan Identitas Menggunakan Wajah Pihak Ketiga</p>
+    </div>
+    <nav class="navbar-container">
+      <ul>
+        <li class="dropdown">
+          <a href="#Perkenalan">Perkenalan</a>
+          <div>
+            <a href="#Tujuan">Tujuan</a>
+            <a href="#Audiens">Audiens</a>
+            <a href="#Batasan Produk">Batasan Produk</a>
+            <a href="#Referensi">Referensi</a>
+          </div>
+        </li>
+        <li><a href="#Deskripsi-keseluruhan">Deskripsi keseluruhan</a></li>
+        <li class="dropdown second">
+          <a href="#">Persyaratan Antarmuka</a>
+            <div>
+              <a href="#perangkat keras">Perangkat Keras</a>
+              <a href="#perangkat lunak">Perangkat Lunak</a>
+            </div>
+        </li>
+        <li><a href="#Diagram-Alir">Diagram Alir</a></li>
+        <li><a href="#Run-Programn">Run Program</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- NAVBAR END -->
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div id="content-container">
+      <article>
+        <div id="first-content">
+          <h2 id="Perkenalan">Perkenalan</h2>
+        <h3 id="Tujuan">1.1 Tujuan Penulisan Dokumen</h3>
+        <p>Dokumen ini merupakan dokumen Software Requirement Specification (SRS) untuk API pengenalan identitas melalui
+          wajah dengan penerapan teknologi face recognition yang memberikan deskripsi yang rinci mengenai kebutuhan
+          aplikasi
+          yang akan dikembangkan. Tujuan dari penulisan dokumen ini adalah untuk memberikan gambaran yang mendetail dan
+          komprehensif mengenai perangkat lunak kepada pengembang dan stakeholder. Dokumen ini disusun sebagai panduan
+          dalam proses pengembangan dan sebagai sarana evaluasi dari awal hingga akhir pengembangan aplikasi. Dengan
+          adanya
+          SRS ini, diharapkan pengembangan aplikasi dapat dilakukan dengan lebih terstruktur sehingga menghindari
+          keambiguan
+          selama proses pengembangan.</p>
+        <br>
+        <h3 id="Audiens">1.2 Audien yang Dituju dan Pembaca yang Disarankan</h3>
+        <p>audiens yang di tuju ialah Aplikasi pihak ketiga yang sedang membutuhkan fungsi pengenalan identitas,
+          fungsi presensi menggunakan wajah, serta fungsi mengubah password hanya menggunakan pengenalan wajah.</p>
+        <br>
+        <h3 id="Batasan Produk">1.3 Batasan Produk</h3>
+        <p>Adapun batasan produk dari aplikasi yang dibuat sebagai berikut:</p>
+        <ul>
+          <li>Pengguna tidak dapat menggunakan fitur screenshot pada saat mengenal wajah maupun menyetel wajah</li>
+          <li>Pengguna tidak dapat menggunakan aplikasi lain yang memberi akses kamera</li>
+          <li>Pengguna harus terhubung ke internet dengan sinyal minimal 3G</li>
+          <li>Fitur akan dinonaktifkan jika terjadi galat saat masuk yang disebabkan oleh tidak cocoknya wajah terhadap
+            data yang ada. Pengguna harus meminta verifikasi melalui e-mail jika ingin mengaktifkan fitur tersebut
+            kembali. </li>
+        </ul>
+        <br>
+        <h3 id="Referensi">1.4 Referensi </h3>
+        <p>Referensi yang digunakan dalam perencanaan dan pengembangan Aplikasi Pengenalan Identitas Menggunakan Wajah
+          Pihak Ketiga ini adalah <a href=" https://luxand.cloud">Luxand</a></p>
+        </div>
+        <br>
+      </article>
+
+      <article id="second-content" >
+          <h2 id="Deskripsi-keseluruhan">Deskripsi keseluruhan</h2>
+            <div class="slider-content1">
+              <h3>2.1 Deskripsi Produk</h3>
+              <p>Aplikasi Pengenalan Identitas Menggunakan Wajah Pihak Ketiga merupakan sebuah aplikasi pihak ketiga
+                yang
+                digunakan sebagai perantara antara pengguna dan aplikasi yang menggunakan aplikasi pihak ketiga kami.
+                Pengguna dapat menyimpan data wajah mereka menggunakan filter kamera pada aplikasi </p>
+            </div>
+            <div class="slider-content1">
+              <h3>2.2 Fungsi Produk</h3>
+              <p>Aplikasi Pengenalan Identitas Menggunakan Wajah Pihak Ketiga adalah aplikasi yang menyediakan sistem
+                login
+                yang unik dan mudah bagi pengguna. Dengan memanfaatkan teknologi face recognition, aplikasi ini
+                menggunakan
+                kamera sebagai perantara antara aplikasi dan pengguna dengan ini pengguna dapat mengakses akun dengan
+                mudah dan aman. </p>
+            </div>
+            <div class="slider-content1">
+              <h3>2.3 Lingkup Operasi</h3>
+              <h4>Adapun lingkungan minimum operasi dari aplikasi ini sebagai berikut :</h4>
+              <ol>
+                <li>Windows 8</li>
+                <li>Browser Opera, Mozilla Firefox, Google Chrome, Brave, dll.</li>
+                <li>Koneksi Internet minimal 3G</li>
+              </ol>
+            </div>
+            <div class="slider-content1">
+              <h3>2.4 Batasan Design dan Implementasi</h3>
+              <h4>Adapun beberapa hal yang harus diperhatikan dalam mengembangan aplikasi ini yaitu : </h4>
+              <ol>
+                <li>Aplikasi ini hanya dapat diakses ketika terdapat jaringan 3G yang menyambung pada smartphone atau
+                  desktop. aplikasi ini diwajibkan memiliki koneksi jaringan yang stabil agak proses pengenalan wajah
+                  bisa mengirim data secara real time</li>
+                <li>Fitur kamera pada aplikasi ini hanya dapat digunakan pada perangkat webcam dengan spesifikasi yang
+                  sesuai atau memadai</li>
+              </ol>
+            </div>
+            <div class="slider-content1">
+              <h3>2.5 Deskripsi Produk</h3>
+              <h4>Skenario pengguna saat menggunakan aplikasi:</h4>
+              <ol>
+                <li>Pengguna membuka aplikasi pihak ketiga, lalu pengguna mengaktifkan fitur face identity. lalu
+                  pengguna diminta untuk mengakses kamera untuk menyimpan data wajah ke dalam database.</li>
+                <li>Setelah mengaktifkan face identity, pengguna bisa mengakses berbagai macam fitur dari aplikasi pihak
+                  ketiga seperti mengubah password berdasarkan wajah, melakukan presensi menggunakan wajah, mengambil
+                  biodata lengkap pengguna dengan wajah.</li>
+              </ol>
+            </div>
+            <div class="slider-button">
+              <button id="left-1"> <= </button>
+              <button id="right-1"> => </button>
+            </div>  
+          <br>
+      </article>
+
+      <article id="third-content" >
+          <h2 id="Persyaratan Antar Muka">Persyaratan Antar Muka</h2>
+          <h3 id="perangkat keras">3.1 Antarmuka Perangkat Keras</h3>
+            <ol>
+              <li>Personal Komputer juga dapat digunakan sebagai platform interaksi dengan pengguna. Pengguna dapat memasukkan input melalui keyboard fisik, menggunakan mouse untuk navigasi, menggunakan kamera untuk pemrosesan gambar, dan melihat output pada layar monitor.</li>
+              <li>Keyboard adalah  perangkat keras yang digunakan untuk memasukkan data dan perintah oleh pengguna. Dalam aplikasi, pengguna dapat menggunakan keyboard untuk memasukkan informasi seperti pencarian produk, login, atau mengisi formulir.</li>
+              <li>kamera adalah perangkat seperti smartphone atau webcam pada PC dapat digunakan untuk menangkap gambar atau video lingkungan sekitar pengguna. Kamera ini diperlukan untuk memanfaatkan teknologi Augmented Reality (AR) dalam aplikasi, di mana pengguna dapat melihat objek nyata dengan tambahan elemen digital.</li>
+              <li>touch screen perangkat keras yang memungkinkan pengguna untuk berinteraksi dengan aplikasi dengan cara menyentuh langsung elemen pada layar. Pengguna dapat menyentuh dan menggesek layar untuk memilih produk, memilih menu, atau melakukan tindakan lainnya dalam aplikasi.</li>
+              <li>Ethernet adalah perangkat keras yang digunakan untuk menghubungkan perangkat dengan jaringan. Ini memungkinkan sistem untuk berinteraksi dengan server atau layanan online, mengirim dan menerima data melalui jaringan, dan melakukan proses komunikasi lainnya yang diperlukan dalam aplikasi</li>
+            </ol>
+            
+          <h3 id="perangkat lunak">3.1 Antarmuka Perangkat lunak</h3>
+            <ol>
+              <li>Bahasa PHP adalah bahasa pemrograman yang sering digunakan untuk pengembangan aplikasi web. PHP adalah singkatan dari "PHP: Hypertext Preprocessor" yang awalnya merupakan singkatan rekursif yang menunjukkan bahwa PHP digunakan untuk memproses kode yang disisipkan dalam dokumen HTML.</li>
+              <li>Bootstrap adalah kerangka kerja (framework) front-end yang populer untuk pengembangan aplikasi web. Dikembangkan oleh Twitter, Bootstrap menyediakan kumpulan alat dan gaya yang siap pakai untuk membangun tata letak, desain, dan komponen antarmuka pengguna (UI) yang responsif dan menarik.</li>
+              <li>MySQL adalah sistem manajemen basis data relasional (RDBMS) yang populer. MySQL digunakan untuk menyimpan dan mengelola data aplikasi, seperti informasi pengguna, produk, pesanan, dan lainnya. Dengan menggunakan MySQL, pengembang dapat membuat dan mengelola tabel-tabel basis data, melakukan kueri data, serta menjaga integritas dan keamanan data aplikasi.</li>
+              <li>Flutter adalah Flutter adalah framework pengembangan aplikasi mobile open-source yang dikembangkan oleh Google. Dengan menggunakan Flutter, pengembang dapat membuat aplikasi yang dapat berjalan diberbagai platform seperti Android dan iOS. Flutter menggunakan bahasa pemrograman Dart dan menyediakan widget-widget UI yang kaya dan fleksibel untuk membangun tampilan aplikasi yang menarik.</li>
+              <li>Laravel adalah kerangka kerja (framework) aplikasi web berbasis PHP yang populer. Laravel dirancang untuk memudahkan pengembangan aplikasi web dengan menyediakan berbagai fitur dan alat yang kuat, serta menyajikan sintaks yang ekspresif dan mudah dipahami</li>
+            </ol>
+        <br>
+      </article>
+
+      <article id="fourth-content" >
+          <h2 id="Diagram-Alir">Diagram Alir</h2>
+          <div class="slider-content2">
+            <h3>Use Case Diagram</h3>
+            <img src="assets/Diagram Flow/use case-image.jpeg" alt="use case Diagram">
+          </div>
+          <div class="slider-content2">
+            <h3>Activity Diagram 1</h3>
+            <img src="assets/Diagram Flow/activity1-image.jpeg" alt="activity Diagram 1">
+          </div>
+          <div class="slider-content2">
+            <h3>Activity Diagram 2</h3>
+            <img src="assets/Diagram Flow/activity2-image.jpeg" alt="activity Diagram 2">
+          </div>
+          <div class="slider-content2">
+            <h3>Sequence Diagram</h3>
+            <img src="assets/Diagram Flow/sequence-images.jpeg" alt="sequence Diagram">
+          </div>
+          <div class="slider-content2">
+            <h3>Entity Relationship Diagram</h3>
+            <img src="assets/Diagram Flow/ERD-image.jpeg" alt="ERD Diagram">
+          </div>
+          <div class="slider-button">
+            <button id="left-2"> <= </button>
+            <button id="right-2"> => </button>
+          </div>
+        <br>
+      </article>
+
+      
+      <article id="fifth-content">
+          <h2 id="Run-Programn">Run Program</h2>
+          <div class="slider-content3">
+            <h3>Landing Page</h3  >
+            <img src="assets/Run Program/landing page-image.jpeg" alt="landing page-image">
+          </div>
+          <div class="slider-content3">
+            <h3>Tampilan Register</h3>
+            <img src="assets/Run Program/register-image.jpeg" alt="register-image">
+          </div>
+          <div class="slider-content3">
+            <h3>Tampilan Login </h3>
+            <img src="assets/Run Program/login-image.jpeg" alt="login-image">
+          </div>
+          <div class="slider-content3">
+            <h3>Reset Password</h3>
+            <img src="assets/Run Program/reset password-image.jpeg" alt="reset password-image">
+          </div>
+          <div class="slider-content3">
+            <h3>Home Page (lightmode)</h3>
+            <img src="assets/Run Program/lightmode home-image.jpeg" alt="lightmode home-image">
+          </div>
+          <div class="slider-content3">
+            <h3>Home Page (darkmode)</h3>
+            <img src="assets/Run Program/darkmode home-image.jpeg" alt="darkmode home-image">
+          </div>
+          <div class="slider-content3">
+            <h3>Tampilan Profile</h3>
+            <img src="assets/Run Program/profile-image.jpeg" alt="profile-image">
+          </div>
+          <div class="slider-content3">
+            <h3>Edit Profile</h3>
+            <img src="assets/Run Program/edit profile-image.jpeg" alt="edit profile-image">
+          </div>
+          <div class="slider-content3">
+            <h3>Tampilan Pengenalan Wajah</h3>
+            <img src="assets/Run Program/recognize-image.jpeg" alt="recognize-image">
+          </div>
+          <div class="slider-content3">
+            <h3>History Pengenalan Wajah</h3>
+            <img src="assets/Run Program/face history-image.jpeg" alt="face history-image">
+          </div>
+          <div class="slider-content3">
+            <h3>History Login</h3>
+            <img src="assets/Run Program/history-image.jpeg" alt="history login-image">
+          </div>
+          <div class="slider-content3">
+            <h3>Mendaftarkan Muka Baru</h3>
+            <img src="assets/Run Program/new recognize-image.jpeg" alt="new recognize-image">
+          </div>
+          <div class="slider-button">
+            <button id="left-3"> <= </button>
+            <button id="right-3"> => </button>
+          </div>
+        <br>
+      </article>
+    </div>  
+
+    <aside>
+      <article>
+        <header>
+          <h2>My Profile</h2>
+          <figure>
+            <img src="assets/profile-image.jpeg" alt="profile">
+            <figcaption>JustD</figcaption>
+          </figure>
+        </header>
+        <section>
+          <table>
+              <tr>
+                  <th>Nama</th>
+                  <td>Bhavatgita Mahardika</td>
+              </tr>
+              <tr>
+                  <th>Tanggal Lahir</th>
+                  <td>23 juni 2003</td>
+              </tr>
+              <tr>
+                  <th>Tempat Lahir</th>
+                  <td>Balikpapan</td>
+              </tr>
+              <tr>
+                  <th>Perkuliahan</th>
+                  <td>Institut Teknologi Kalimantan</td>
+              </tr>
+                  <th>Jurusan</th>
+                  <td>Informatika</td>
+              </tr>
+          </table>
+      </section>
+      </article>
+
+        <article id="todoList" >
+        <h2>ToDo List</h2>
+        <input type="text" id="taskInput" placeholder="Tambahkan tugas...">
+        <button onclick="addTask()">Tambah</button>
+        <p id="taskCount">Tugas yang belum selesai: 0</p>
+        <ul id="taskList"></ul>
+        <div id="completedTasks">
+          <h2>tugas yang selesai</h2>
+          <ul id="completedTaskList"></ul>
+        </div>
+        </article>
+
+    </aside>
+  </main>
+  <!-- MAIN CONTENT END -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Aplikasi Pengenalan Identitas Menggunakan Wajah Pihak Ketiga &#169; 2023, Institut Teknologi Kalimantan</p>
+  </footer>
+  <!-- FOOTER END -->
+  
+  <script src="script/slider.js"></script>
+  <script src="script/todoList.js"></script>
+</body>
+</html>

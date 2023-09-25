@@ -1,0 +1,6 @@
+Fitur dalam web ini :
+1. Drop down pada navigator yang hanya menggunakan bahasa pemograman html css
+2. Fitur Slider menggunakan bahasa pemograman javascript
+3. todolist yang bahasa pemograman javascript dimana saya memberikan tambahan bisa melihat berapa tugas yang belum di kerjakan 
+
+Artikel yang saya gunakan adalah laporan Tugas Besar perkuliahan saya
